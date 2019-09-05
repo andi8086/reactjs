@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import './App.css';
 import Counter from './Counter';
 import SlideShow from './Slideshow';
+import Rating from './Rating'
 
 // Function or class can be used
 
@@ -18,7 +19,8 @@ function App() {
     {id: 2, title: "Putzen", done: false},
     {id: 3, title: "Steuererkl.", done: false}
   ]);
-  
+  const [rating1, setRating1] = useState(3);
+
   return (
     <div className="App">
       <h1>Playground</h1>
@@ -46,6 +48,8 @@ function App() {
             {todo.done ? "DONE": "TODO"}: {todo.title}
           </li>) }
       </ul>
+      <h2>Rating</h2>
+      <Rating stars={rating1}></Rating>
       </div>
     
   );
