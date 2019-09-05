@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import Counter from './Counter';
 import SlideShow from './Slideshow';
@@ -9,8 +9,10 @@ import SlideShow from './Slideshow';
 // < changes to XML and { changes to JS
 // dynamic parts within XML cannot contain objects
 function App() {
-
+  
   const articleName = "ReactJS"
+
+  const [input1, setinput1] = useState("placeholder");
 
   let coinText
   if (Math.random() < 0.5) {
@@ -36,7 +38,10 @@ function App() {
       <h2>Counter</h2>
       <Counter></Counter>
       <SlideShow></SlideShow>
-    </div>
+      <h2>Inputs</h2>
+      <input onChange={ (e) => setinput1(e.target.value) } value={ input1 }/>
+      <button onClick={ () => setinput1("") }>clear</button>
+      </div>
     
   );
 }
