@@ -15,6 +15,7 @@ function SlideShow() {
                     setimgnum(imgnum - 1)
                 }
                 }}>
+                { /* This is a comment */ }
                 {"<"}
             </button>
             <button onClick={() => {
