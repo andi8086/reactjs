@@ -37,7 +37,7 @@ function App() {
       <button onClick={ () => setinput1("") }>clear</button>
       <h2>Todos</h2>
       <ul>
-        { todos.map(todo => <li>{todo}</li>) }
+        { todos.map((todo, index) => <li key={index}>{todo}</li>) }
       </ul>
       </div>
     
