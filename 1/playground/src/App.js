@@ -19,7 +19,7 @@ function App() {
     {id: 2, title: "Putzen", done: false},
     {id: 3, title: "Steuererkl.", done: false}
   ]);
-  const [rating1, setRating1] = useState(3);
+  const [rating1, setRating1] = useState(1);
 
   return (
     <div className="App">
@@ -49,7 +49,7 @@ function App() {
           </li>) }
       </ul>
       <h2>Rating</h2>
-      <Rating stars={rating1}></Rating>
+      <Rating onChange={(e) => setRating1(e)} stars={rating1}></Rating>
       </div>
     
   );
