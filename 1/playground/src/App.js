@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Counter from './Counter';
+import SlideShow from './Slideshow';
 
 // Function or class can be used
 
@@ -34,6 +35,7 @@ function App() {
       </div>
       <h2>Counter</h2>
       <Counter></Counter>
+      <SlideShow></SlideShow>
     </div>
     
   );
