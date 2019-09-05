@@ -13,7 +13,8 @@ function App() {
   const articleName = "ReactJS"
   const [CoinText, setCoinText] = useState(Math.random() < 0.5 ? "Kopf" : "Zahl")
   const [input1, setinput1] = useState("placeholder");
-
+  const [todos, settodos] = useState(["Einkaufen", "Steuererklaerung", "Putzen"]);
+  
   return (
     <div className="App">
       <h1>Playground</h1>
@@ -34,6 +35,10 @@ function App() {
       <h2>Inputs</h2>
       <input onChange={ (e) => setinput1(e.target.value) } value={ input1 }/>
       <button onClick={ () => setinput1("") }>clear</button>
+      <h2>Todos</h2>
+      <ul>
+        { todos.map(todo => <li>{todo}</li>) }
+      </ul>
       </div>
     
   );
