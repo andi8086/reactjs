@@ -1,0 +1,12 @@
+.star {
+    background-color: #006;
+    font-size: 32px;
+}
+
+.star.on {
+    color: #00AA00;
+}
+
+.star.off {
+    color: #777;
+}
