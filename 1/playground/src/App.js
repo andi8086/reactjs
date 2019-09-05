@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Counter from './Counter';
 
 // Function or class can be used
 
@@ -31,6 +32,8 @@ function App() {
       <div>
         <button onClick={alert}>Click me</button>
       </div>
+      <h2>Counter</h2>
+      <Counter></Counter>
     </div>
     
   );
