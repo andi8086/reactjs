@@ -1,0 +1,14 @@
+.toggle {
+    width: 32px;
+    height: 32px;
+}
+
+.toggle.on {
+    border: 1px solid black;
+    background: #777777;
+}
+
+.toggle.off {
+    border: 1px solid black;
+    background: #000;
+}

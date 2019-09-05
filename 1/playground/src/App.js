@@ -3,6 +3,7 @@ import './App.css';
 import Counter from './Counter';
 import SlideShow from './Slideshow';
 import Rating from './Rating'
+import ToggleButton from './togglebutton'
 
 // Function or class can be used
 
@@ -20,6 +21,7 @@ function App() {
     {id: 3, title: "Steuererkl.", done: false}
   ]);
   const [rating1, setRating1] = useState(1);
+  const [toggleState, setToggleState] = useState(false);
 
   return (
     <div className="App">
@@ -50,8 +52,11 @@ function App() {
       </ul>
       <h2>Rating</h2>
       <Rating onChange={(e) => setRating1(e)} stars={rating1}></Rating>
-      </div>
-    
+      <h2>Toggle Button</h2>
+      <ToggleButton onToggle={() => {
+        return setToggleState(!toggleState);
+      }} active={toggleState}></ToggleButton>
+      &nbsp;</div>
   );
 }
 
