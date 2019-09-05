@@ -13,7 +13,11 @@ function App() {
   const articleName = "ReactJS"
   const [CoinText, setCoinText] = useState(Math.random() < 0.5 ? "Kopf" : "Zahl")
   const [input1, setinput1] = useState("placeholder");
-  const [todos, settodos] = useState(["Einkaufen", "Steuererklaerung", "Putzen"]);
+  const [todos, settodos] = useState([
+    {id: 1, title: "Einkaufen", done: false},
+    {id: 2, title: "Putzen", done: false},
+    {id: 3, title: "Steuererkl.", done: false}
+  ]);
   
   return (
     <div className="App">
@@ -37,7 +41,7 @@ function App() {
       <button onClick={ () => setinput1("") }>clear</button>
       <h2>Todos</h2>
       <ul>
-        { todos.map((todo, index) => <li key={index}>{todo}</li>) }
+        { todos.map((todo) => <li key={todo.id}>{todo.title}</li>) }
       </ul>
       </div>
     
