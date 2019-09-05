@@ -28,6 +28,9 @@ function App() {
           {articleName}
         </a>
       </div>
+      <div>
+        <button onClick={alert}>Click me</button>
+      </div>
     </div>
     
   );
