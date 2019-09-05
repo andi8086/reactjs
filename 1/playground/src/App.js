@@ -8,6 +8,8 @@ import './App.css';
 // dynamic parts within XML cannot contain objects
 function App() {
 
+  const articleName = "ReactJS"
+
   let coinText
   if (Math.random() < 0.5) {
       coinText = "Kopf"
@@ -21,7 +23,13 @@ function App() {
       <div> Ein Jahr hat {365 * 24} Stunden</div>
       <div> Heute ist der {new Date().toLocaleDateString()}</div>
       <div> {coinText}</div>
+      <div>
+        <a href={'https://en.wikipedia.org/wiki/' + articleName}>
+          {articleName}
+        </a>
+      </div>
     </div>
+    
   );
 }
 
