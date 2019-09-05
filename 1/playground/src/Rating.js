@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Rating(props) {
-    return <> { "*".repeat(props.stars) } </>
+function Rating({stars}) {
+    return <> { "*".repeat(stars) } </>
 
 }
 
