@@ -41,7 +41,10 @@ function App() {
       <button onClick={ () => setinput1("") }>clear</button>
       <h2>Todos</h2>
       <ul>
-        { todos.map((todo) => <li key={todo.id}>{todo.title}</li>) }
+        { todos.map((todo) => 
+          <li key={todo.id}>
+            {todo.done ? "DONE": "TODO"}: {todo.title}
+          </li>) }
       </ul>
       </div>
     
