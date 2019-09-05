@@ -8,7 +8,7 @@ function Counter() {
 
     return (
     <div className={"counter " + (count > 10 ? "high": "low")}>
-        <button onClick={() => {setCount(count + 1)}}>{count}</button>
+        <button style={{ fontSize: count+16 }} onClick={() => {setCount(count + 1)}}>{count}</button>
         <button onClick={() => {setCount(0)}}>Reset</button>
     </div>);
 }
