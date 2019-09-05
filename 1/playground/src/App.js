@@ -11,22 +11,15 @@ import SlideShow from './Slideshow';
 function App() {
   
   const articleName = "ReactJS"
-
+  const [CoinText, setCoinText] = useState(Math.random() < 0.5 ? "Kopf" : "Zahl")
   const [input1, setinput1] = useState("placeholder");
 
-  let coinText
-  if (Math.random() < 0.5) {
-      coinText = "Kopf"
-  } else {
-      coinText = "Zahl"
-
-  }
   return (
     <div className="App">
       <h1>Playground</h1>
       <div> Ein Jahr hat {365 * 24} Stunden</div>
       <div> Heute ist der {new Date().toLocaleDateString()}</div>
-      <div> {coinText}</div>
+      <div> {CoinText}</div>
       <div>
         <a href={'https://en.wikipedia.org/wiki/' + articleName}>
           {articleName}
