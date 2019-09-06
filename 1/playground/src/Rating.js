@@ -14,8 +14,9 @@ function Rating({stars, onChange = null}) {
 
     function getStar(id)
     {
-        let res = id > stars ? "☆" : "★"
-        let sstyle = id > stars ? "star off": "star on"
+        let inactive = id > stars;
+        let res = inactive ? "☆" : "★"
+        let sstyle = inactive ? "star off": "star on"
         
         return <span key={id} onClick={() => {
             if (onChange) return onChange(id);

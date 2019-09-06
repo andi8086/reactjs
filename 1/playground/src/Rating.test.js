@@ -33,3 +33,9 @@ describe("events", () => {
         expect(mockFn).toBeCalledWith(4);
     })
 })
+
+it('correctly renders 3 stars to snapshot', () => {
+    const tree = TestRenderer
+        .create( <Rating stars={3} /> ).toJSON();
+        expect(tree).toMatchSnapshot();
+})
