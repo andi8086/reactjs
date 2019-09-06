@@ -1,12 +1,11 @@
 import React from 'react';
+import './togglebutton.css';
 
 function ToggleButton({active, onToggle}) {
 
-    let currentStateStyle = active ? "toggle on": "toggle off";
-
-    return <button className={currentStateStyle} onClick={() => {
+    return <div className={active ? "toggle on": "toggle off"} onClick={() => {
         if (onToggle) return onToggle(active);
-    }}>{active ? "true": "false"}</button>
+    }}>{active ? "true": "false"}</div>
 }
 
 

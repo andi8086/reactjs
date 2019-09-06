@@ -52,6 +52,7 @@ function App() {
       </ul>
       <h2>Rating</h2>
       <Rating onChange={(e) => setRating1(e)} stars={rating1}></Rating>
+    
       <h2>Toggle Button</h2>
       <ToggleButton onToggle={() => {
         return setToggleState(!toggleState);

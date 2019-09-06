@@ -5,10 +5,10 @@
 
 .toggle.on {
     border: 1px solid black;
-    background: #777777;
+    background: lightgreen;
 }
 
 .toggle.off {
     border: 1px solid black;
-    background: #000;
+    background: lightcoral;
 }
