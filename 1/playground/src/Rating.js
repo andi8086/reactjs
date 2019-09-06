@@ -17,12 +17,12 @@ function Rating({stars, onChange = null}) {
         let res = id > stars ? "☆" : "★"
         let sstyle = id > stars ? "star off": "star on"
         
-        return <span onClick={() => {
+        return <span key={id} onClick={() => {
             if (onChange) return onChange(id);
         }} className={sstyle}>{res}</span>
     }
  
-    return <> { starIDs.map(id => getStar(id)) } </>
+    return <div>{ starIDs.map(id => getStar(id)) }</div>
 }
 
 Rating.propTypes = {
