@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './stars.css'
+import PropTypes from 'prop-types';
 
 // TODO: 
 // return Array of spans
@@ -22,6 +23,11 @@ function Rating({stars, onChange = null}) {
     }
  
     return <> { starIDs.map(id => getStar(id)) } </>
+}
+
+Rating.propTypes = {
+    stars: PropTypes.number.isRequired,
+    onChange: PropTypes.func
 }
 
 export default Rating;
